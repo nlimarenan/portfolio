@@ -16,9 +16,9 @@ FROM openjdk:11 AS release
 
 ARG module
 
-COPY --from=builder /app/build/libs/*.jar /build/portfolio.jar
+COPY --from=builder /app/build/libs/*.jar /portfolio.jar
 #COPY docker-entrypoint.sh /usr/local/bin/
-COPY docker-entrypoint.sh /build/
+COPY docker-entrypoint.sh /
 #RUN chmod +x /usr/local/bin/docker-entrypoint.sh
-RUN chmod +x /build/docker-entrypoint.sh
-ENTRYPOINT ["/build/docker-entrypoint.sh"]
+RUN chmod +x /docker-entrypoint.sh
+ENTRYPOINT ["/docker-entrypoint.sh"]
