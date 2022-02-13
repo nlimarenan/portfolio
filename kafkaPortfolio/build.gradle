@@ -9,7 +9,7 @@ mainClassName = 'infra.config.KafkaPortfolioInitializer'
 group 'br.com.portfolio'
 version '1.0-SNAPSHOT'
 
-jar.enabled=true
+jar.enabled=false
 
 repositories {
     mavenCentral()
