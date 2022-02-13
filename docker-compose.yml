@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  db.portfolio:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+  kafkaPortfolio:
+    container_name: api.kafkaPortfolio
+    hostname: kafkaPortfolio
+    build:
+      args:
+        module: kafkaPortfolio
+      context: .
+      dockerfile: ./Dockerfile
+    image: portfolio:latest
+    env_file: .env
+    ports:
+      - 9020:8080
+    networks:
+      - bubble
+networks:
+  bubble:
+    external: true
