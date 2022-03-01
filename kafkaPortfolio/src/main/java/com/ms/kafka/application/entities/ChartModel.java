@@ -1,4 +1,4 @@
-package domain;
+package com.ms.kafka.application.entities;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,11 +9,11 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "CHART")
-public class Chart {
+public class ChartModel {
     @Id
     private UUID uuid;
     @Column(name = "PRODUCT_ID")
-    private List<Product> productList;
+    private List<ProductModel> productModelList;
     @Column(name = "USER_ID")
-    private User user;
+    private UserModel userModel;
 }

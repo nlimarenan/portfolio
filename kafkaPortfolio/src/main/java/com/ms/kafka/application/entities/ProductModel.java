@@ -1,4 +1,4 @@
-package domain;
+package com.ms.kafka.application.entities;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -13,7 +13,7 @@ import java.util.UUID;
 @Getter
 @Setter
 @Table(name = "PRODUCT")
-public class Product {
+public class ProductModel {
     @Id
     @Column(name = "ID")
     private UUID uuid;

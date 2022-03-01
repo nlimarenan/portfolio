@@ -1,4 +1,4 @@
-package infra.config;
+package com.ms.kafka.adpters.configuration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
