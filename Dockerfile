@@ -4,6 +4,7 @@ WORKDIR /app
 ARG module
 
 COPY ./gradlew ./
+COPY ./application.properties ./
 COPY ./settings.gradle ./
 COPY ./gradle ./gradle
 COPY ./$module ./

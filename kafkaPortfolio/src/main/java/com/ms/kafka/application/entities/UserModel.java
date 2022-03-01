@@ -1,10 +1,10 @@
-package domain;
+package com.ms.kafka.application.entities;
 
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
-public class User {
+public class UserModel {
     private String name;
     private String userName;
-    private Chart chart;
+    private ChartModel chartModel;
 }
