@@ -1,3 +1,4 @@
 rootProject.name = 'PortfolioProject'
-include 'KafkaPortfolio'
+include 'kafkaPortfolio'
+include 'designPatternPortfolio'
 

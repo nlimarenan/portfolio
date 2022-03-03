@@ -6,11 +6,6 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
-  adminer:
-    image: adminer
-    restart: always
-    ports:
-      - 8080:8080
   kafkaPortfolio:
     container_name: api.kafkaPortfolio
     hostname: kafkaPortfolio

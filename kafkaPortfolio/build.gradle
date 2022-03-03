@@ -5,7 +5,7 @@ plugins {
 }
 
 apply plugin: 'application'
-mainClassName = 'infra.config.KafkaPortfolioInitializer'
+mainClassName = 'com.ms.kafka.adpters.configuration.KafkaPortfolioInitializer'
 group 'br.com.portfolio'
 version '1.0-SNAPSHOT'
 
@@ -18,16 +18,16 @@ repositories {
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    compile 'org.springframework.kafka:spring-kafka'
-    compile 'org.springframework.boot:spring-boot-starter-undertow'
+    implementation 'org.springframework.kafka:spring-kafka'
+    implementation 'org.springframework.boot:spring-boot-starter-undertow'
     runtimeOnly 'com.h2database:h2'
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
     testCompileOnly 'org.projectlombok:lombok:1.18.20'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
 }
 
 configurations {
@@ -35,13 +35,13 @@ configurations {
 }
 
 springBoot {
-    mainClass = 'infra.config.KafkaPortfolioInitializer'
+    mainClass = 'com.ms.kafka.adpters.configuration.KafkaPortfolioInitializer'
 }
 
 jar {
     manifest {
         attributes(
-                'Main-Class': 'infra.config.KafkaPortfolioInitializer'
+                'Main-Class': 'com.ms.kafka.adpters.configuration.KafkaPortfolioInitializer'
         )
     }
 }
