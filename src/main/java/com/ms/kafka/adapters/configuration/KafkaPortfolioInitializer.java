@@ -1,4 +1,4 @@
-package com.ms.kafka.adpters.configuration;
+package com.ms.kafka.adapters.configuration;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

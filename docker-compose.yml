@@ -10,8 +10,6 @@ services:
     container_name: api.kafkaPortfolio
     hostname: kafkaPortfolio
     build:
-      args:
-        module: kafkaPortfolio
       context: .
       dockerfile: ./Dockerfile
     image: portfolio:latest

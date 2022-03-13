@@ -1,14 +1,12 @@
 FROM openjdk:11 AS builder
 WORKDIR /app
 
-ARG module
-
 COPY ./gradlew ./
 COPY ./application.properties ./
 COPY ./settings.gradle ./
 COPY ./gradle ./gradle
-COPY ./$module ./
-COPY ./$module/build.gradle ./
+COPY ./ ./
+COPY ./build.gradle ./
 COPY ./docker-entrypoint.sh ./
 RUN ./gradlew build
 
