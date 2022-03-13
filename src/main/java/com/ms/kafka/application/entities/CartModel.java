@@ -7,13 +7,13 @@ import javax.persistence.Table;
 import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name = "CART")
+//@Entity
+//@Table(name = "CART")
 public class CartModel {
-    @Id
+    //@Id
     private UUID uuid;
-    @Column(name = "PRODUCT_ID")
+    //@Column(name = "PRODUCT_ID")
     private List<ProductModel> productModelList;
-    @Column(name = "USER_ID")
+    //@Column(name = "USER_ID")
     private UserModel userModel;
 }

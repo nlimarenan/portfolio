@@ -2,10 +2,11 @@ plugins {
     id 'org.springframework.boot' version '2.4.5'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'checkstyle'
 }
 
 apply plugin: 'application'
-mainClassName = 'com.ms.kafka.adapters.configuration.KafkaPortfolioInitializer'
+mainClassName = 'com.ms.kafka.KafkaPortfolioInitializer'
 group 'br.com.portfolio'
 version '1.0-SNAPSHOT'
 
@@ -35,17 +36,24 @@ configurations {
 }
 
 springBoot {
-    mainClass = 'com.ms.kafka.adapters.configuration.KafkaPortfolioInitializer'
+    mainClass = 'com.ms.kafka.KafkaPortfolioInitializer'
 }
 
 jar {
     manifest {
         attributes(
-                'Main-Class': 'com.ms.kafka.adapters.configuration.KafkaPortfolioInitializer'
+                'Main-Class': 'com.ms.kafka.KafkaPortfolioInitializer'
         )
     }
 }
 
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+checkstyle{
+    toolVersion = '8.29'
+}
 //restoreWrapperWhenNecessary
 /*task restoreWrapper(type: Wrapper) {
     gradleVersion = '7.4'

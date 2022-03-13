@@ -17,7 +17,7 @@ public class ProductModel {
     @Id
     @Column(name = "ID")
     private UUID uuid;
-    @Column(name="PRODUCT_NAME")
+    @Column(name = "PRODUCT_NAME")
     private String productName;
     @Column(name = "PRODUCT_PRICE")
     private Long productPrice;

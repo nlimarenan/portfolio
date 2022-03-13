@@ -2,7 +2,7 @@ FROM openjdk:11 AS builder
 WORKDIR /app
 
 COPY ./gradlew ./
-COPY ./application.properties ./
+COPY ./application.yaml ./
 COPY ./settings.gradle ./
 COPY ./gradle ./gradle
 COPY ./ ./
