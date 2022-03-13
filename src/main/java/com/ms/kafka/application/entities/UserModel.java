@@ -6,5 +6,5 @@ import lombok.AllArgsConstructor;
 public class UserModel {
     private String name;
     private String userName;
-    private ChartModel chartModel;
+    private CartModel cartModel;
 }

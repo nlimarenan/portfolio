@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "CHART")
-public class ChartModel {
+@Table(name = "CART")
+public class CartModel {
     @Id
     private UUID uuid;
     @Column(name = "PRODUCT_ID")
