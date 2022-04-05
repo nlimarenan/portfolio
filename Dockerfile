@@ -3,10 +3,10 @@ WORKDIR /app
 
 COPY ./gradlew ./
 COPY ./application.yaml ./
-COPY ./settings.gradle ./
+COPY settings.gradle.kts ./
 COPY ./gradle ./gradle
 COPY ./ ./
-COPY ./build.gradle ./
+COPY build.gradle.kts ./
 COPY ./docker-entrypoint.sh ./
 RUN ./gradlew build
 
