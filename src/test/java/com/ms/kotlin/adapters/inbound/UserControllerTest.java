@@ -1,4 +1,4 @@
-package com.ms.kafka.adapters.inbound;
+package com.ms.kotlin.adapters.inbound;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
